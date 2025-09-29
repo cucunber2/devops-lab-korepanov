@@ -16,8 +16,11 @@ Date of create: 29.09.2025
 
 Date of finished: 29.09.2025
 
-1.![alt text](image.png)
-2.![alt text](image-1.png)
-3.![alt text](image-2.png)
-
-https://github.com/cucunber2/devops-lab-korepanov
+1. Создал репозиторий
+![alt text](image.png)
+локально инициализировал git, добавил файлы и закоммитил изменения с помощью git commit
+2. создал ветку develop с помощью команды `git checkout -b 'develop'
+3. Создал пулл реквест и с помощью ребейза с
+![alt text](image-1.png)
+4. История коммитов
+![alt text](image-2.png)
