@@ -39,6 +39,44 @@ Date of finished: 01.10.2025
 
 https://hub.docker.com/repository/docker/codester1976/my-flask-app/general
 
+Далее добавляем триггеры на develop ветку
+
+```
+on:
+  push:
+    branches:
+      - main
+      - develop
+```
+
+в шаге с пушем образа добавляем тэг в конец названия, чтобы разделить master и develop весрии
+
+```
+tags: ${{ secrets.DOCKER_USERNAME }}/my-flask-app:${{ github.ref_name }}
+```
+
+Добавляем 2 разных красивых сообщения в завимости от текущей ветки
+
+```
+      - name: Deploy to Development
+        if: github.ref == 'refs/heads/develop'
+        run: echo "Deploying to development server..."
+
+      - name: Deploy to Production
+        if: github.ref == 'refs/heads/main'
+        run: echo "Deploying to production server..."
+```
+
+Результат прогона
+
+![alt text](image-5.png)
+
+Добавилась новая версия образа из ветки develop
+
+Два успешных экшена
+
+![alt text](image-6.png)
+
 
 
 
