@@ -28,7 +28,7 @@ jobs:
           context: ./lab2
           file: ./lab2/Dockerfile
           push: true
-          tags: username/my-flask-app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/my-flask-app:latest
 
       - name: Deploy
         run: echo "Deploying Docker image"
