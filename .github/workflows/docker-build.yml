@@ -3,7 +3,8 @@ name: Docker Build and Deploy
 on:
   push:
     branches:
-      - master
+      - main
+      - develop
 
 jobs:
   build-and-deploy:
@@ -28,7 +29,13 @@ jobs:
           context: ./lab2
           file: ./lab2/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/my-flask-app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/my-flask-app:${{ github.ref_name }}
 
-      - name: Deploy
-        run: echo "Deploying Docker image"
+      - name: Deploy to Development
+        if: github.ref == 'refs/heads/develop'
+        run: echo "Deploying to development server..."
+
+      - name: Deploy to Production
+        if: github.ref == 'refs/heads/main'
+        run: echo "Deploying to production server..."
+
