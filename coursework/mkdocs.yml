@@ -1,0 +1,63 @@
+site_name: Персональный сайт
+site_description: Мой Персональный сайт
+site_author: KOREPANOV ANDREY
+
+theme:
+  name: material
+  language: ru
+
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Тёмная тема
+    - scheme: slate
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая тема
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.share
+
+plugins:
+  - search
+  - blog:
+      blog_dir: blog
+      blog_toc: true
+      post_date_format: short
+
+nav:
+  - Главная: index.md
+  - О себе: about.md
+  - Проекты:
+      - Обзор проектов: projects/index.md
+      - Личный проект: projects/personal.md
+      - Коммерческие проекты: projects/commercial.md
+  - Резюме: resume.md
+  - Достижения: achievements.md
+  - Блог:
+      - Обзор: blog/index.md
+      - Первая запись: blog/first-post.md
+      - Вторая запись: blog/second-post.md
+  - Контакты: contacts.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - footnotes
+  - tables
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.details
+  - pymdownx.superfences
+
