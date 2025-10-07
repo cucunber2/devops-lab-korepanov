@@ -9,3 +9,4 @@
 # Publish
 
 1. mkdocs build
+2. push to main
