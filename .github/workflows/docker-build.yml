@@ -5,6 +5,8 @@ on:
     branches:
       - master
       - develop
+    paths:
+      - 'lab2/**'
 
 jobs:
   build-and-deploy:

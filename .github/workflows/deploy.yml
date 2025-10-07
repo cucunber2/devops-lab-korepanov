@@ -15,18 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: 'coursework'
+        working-directory: './coursework'
 
     steps:
-      # 🧩 Клонирование кода
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 🐍 Установка нужной версии Python (по pyenv)
       - name: Set up Python using pyenv
         uses: actions/setup-python@v5
         with:
-          python-version-file: 'coursework/.python-version'
+          python-version-file: '.python-version'
 
       - name: Install dependencies
         run: |
