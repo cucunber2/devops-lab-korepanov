@@ -1,6 +1,6 @@
 # О себе
 
-![Фото](images/tamaev.jpg){ width="160" align="right" style="border-radius: 10px;" }
+![Фото](images/tamaev.png){ width="160" align="right" style="border-radius: 10px;" }
 
 Меня зовут **A**, я **Full-Stack разработчик**.
 
