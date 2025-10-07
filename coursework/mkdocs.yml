@@ -1,6 +1,8 @@
 site_name: Персональный сайт
 site_description: Мой Персональный сайт
 site_author: KOREPANOV ANDREY
+site_url: https://cucunber2.github.io/devops-lab-korepanov/
+use_directory_urls: true
 
 theme:
   name: material
